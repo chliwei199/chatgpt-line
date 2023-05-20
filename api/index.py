@@ -48,7 +48,7 @@ def callback():
         abort(400)
 
     return 'OK'
-    
+
 # domain root
 @app.route('/')
 def home():
@@ -56,7 +56,7 @@ def home():
 
 
 @app.route("/webhook", methods=['POST'])
-def callback():
+def webhook():
     # get X-Line-Signature header value
     signature = request.headers['X-Line-Signature']
     # get request body as text

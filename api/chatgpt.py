@@ -1,9 +1,9 @@
 from api.prompt import Prompt
 
 import os
-import openaiLINE
+import openai
 
-openaiLINE.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 class ChatGPT:
     def __init__(self):
@@ -16,7 +16,7 @@ class ChatGPT:
         self.max_tokens = int(os.getenv("OPENAI_MAX_TOKENS", default = 240))
 
     def get_response(self):
-        response = openaiLINE.Completion.create(
+        response = openai.Completion.create(
             model=self.model,
             prompt=self.prompt.generate_prompt(),
             temperature=self.temperature,

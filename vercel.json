@@ -9,10 +9,6 @@
     {
       "src": "/(.*)",
       "dest": "api/index.py"
-    },
-    {
-      "src": "/callback",
-      "dest": "api/app.py"
     }
   ]
 }
